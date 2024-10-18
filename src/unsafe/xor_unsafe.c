@@ -1,5 +1,5 @@
 #define NN_IMPLEMENTATION
-#include "neural_net.h"
+#include "../neural_net.h"
 #include <mach/mach_time.h>
 
 
