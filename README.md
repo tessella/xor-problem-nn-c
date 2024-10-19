@@ -10,7 +10,7 @@ Implementing a XOR neural network from scratch was tedious but served as a great
    - A header file (`neural_net.h`) containing a lightweight framework for matrix operations.
 
 2. **Dual Versions**:
-   - Unsafe version (`xor_port.c`): A straightforward but less robust approach, leading to 256 bytes of leaked memory:
+   - Unsafe version (`xor_unsafe.c`): A straightforward but less robust approach, leading to 256 bytes of leaked memory:
   ```powershell
   ❯ leaks --atExit -- ./Machine_Learning_C
   cost: 0.375066
@@ -31,7 +31,7 @@ Implementing a XOR neural network from scratch was tedious but served as a great
   Process 4217: 14 leaks for 256 total leaked bytes.
   ```  
   
-   - Memory-safe version (`xor_port_pointers.c`): Uses pointers for proper memory management, removing memory leaks:
+   - Memory-safe version (`xor_pointers.c`): Uses pointers for proper memory management, removing memory leaks:
   ```powershell
   ❯ leaks --atExit -- ./Machine_Learning_C
   cost: 0.252240
